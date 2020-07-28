@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <title>
+        admission form
+    </title>
+</head>
+
+<body bgcolor=#CAEBF2 text=blue>
+    <form action="/" method="post">
+        <center>Date:<input type=date name=d value="">
+            Form No:<input type=text name=t1 value=""></center><br>
+        <h1 align=center>THE SCHOLAR'S ENGLISH HIGH SCHOOL & JR. COLLEGE</h1>
+        <h2 align=center>FORM OF APPLICATION FOR ADMISSION-COMMERCE</h2>
+        <hr color=red width=80% height=200>
+        ENTER AADHAR CARD NUMBER<input type=text name=adr value="" required><br>
+        ENTER THE STUDENT'S NAME:<input type=text name=name value="" required>
+        ENTER THE FATHER'S NAME:<input type=text name=fname required>
+        ENTER THE SURNAME :<input type=text name=sname required><br>
+        ENTER THE MOTHER'S NAME :<input type=text name=mname required><br>
+        RELIGION:<input type=text name=rel required>
+        CAST:<input type=text name=cast required>
+        SUBCAST:<input type=text name=scast required>
+        NATIONALITY<input type=text name=nat value=INDIAN required><br>
+        MOTHER TONGUE<input type=text name=mt required><br>
+        PARENT'S/GUARDIAN'S OCCUPATION:
+        FATHER<input type=text name=focc>
+        MOTHER<input type=text name=mocc>
+        GUARDIAN<input type=text name=gocc><br>
+        FATHER'S MOBILE NUMBER<input type=tel name=fmn maxlength=10><br>
+        MOTHER'S MOBILE NUMBER<input type=tel name=mmn maxlength=10><br>
+        SELECT THE GENDER:<input type=radio name=gender value=1 required>MALE
+        <input type=radio name=gender value=2 required>FEMALE<br>
+        DATE OF BIRTH(in words):<input type=text name=dobw size=100><br>
+        SELECT DATE OF BIRTH:
+        <input type="date" name="dob">
+        <br>
+        ENTER THE BIRTH PLACE:<input type=text name=bp value="" required><br>
+        PROOF OF DATE OF BIRTH ATTATCHED(SCHOOL LEAVING CERTIFICATE):<input type=radio name=proof value=1 required>YES
+        <input type=radio name=proof value=2 required>NO<br>
+        LAST SCHOOL ATTENDED:<input type=text name=ls value="" size=50 required><br>
+        RESIDENTIAL ADDRESS:<textarea name=ta rows=4 cols=50></textarea><br>
+        NAME OF SCHOOL THROUGH WHICH STUDENT HAS PASSED SSC:<input type=text name=ssc value="" size=50 required><br>
+
+        SSC SEAT NUMBER:<input type=text name=seat value="" maxlength=7 required><br>
+        BOARD NAME:<input type=text name=bn value="" required><br>
+        MONTH OF PASSING:
+        <input type="month" name="dop" min="2001-01">
+        <br>
+        MARKS OBTAINED:<BR>
+        ENGLISH:<input type=text name=em value="" maxlength=3 size=3 required>
+        MARATHI:<input type=text name=mm value="" maxlength=3 size=3 required>
+        HINDI:<input type=text name=hm value="" maxlength=3 size=3 required>
+        MATHS:<input type=text name=msm value="" maxlength=3 size=3 required>
+        SCIENCE:<input type=text name=sm value="" maxlength=3 size=3 required>
+        SOCIAL SCIENCE:<input type=text name=ssm value="" maxlength=3 size=3 required>
+        TOTAL:<input type=text name=tot value="" maxlength=3 size=3 required>
+        PERCENTAGE:<input type=text name=per value="" maxlength=6 size=6 required><br>
+        OTHER BOARDS:
+        TOTAL:<input type=text name=otot value="" maxlength=3 size=3>
+        PERCENTAGE:<input type=text name=oper value="" maxlength=6 size=6><br>
+        <b>SUBJECTS (COMPULSORY):</b>
+        <ol type=1>
+            <li>ENGLISH</li>
+            <li>ECONOMICS</li>
+            <li>BOOK KEEPING & ACCOUNTANCY</li>
+            <li>ORGANISATION OF COMMERCE & MANAGEMENT</li>
+            <li>EVS</li>
+            <li>PE</li>
+        </ol>
+        OPTIONAL SUBJECT ONE:
+        <input type=radio name=opt1 value=1 required>IT
+        <input type=radio name=opt1 value=2 required>HINDI
+        <input type=radio name=opt1 value=3 required>MARATHI<br>
+        <br>
+        OPTIONAL SUBJECT TWO:
+        <input type=radio name=opt2 value=1 required>MATHS
+        <input type=radio name=opt2 value=2 required>SP<br>
+        DOCUMENTS ATTATCHED:<br>
+        <input type=checkbox name="doc" value=1 required>Marksheet of std X<br>
+        <input type=checkbox name="doc" value=2 required>Leaving/Transfer Certificate<br>
+        <input type=checkbox name="doc" value=3 required>Board Leaving Certificate(Private candidate)<br>
+        <input type=checkbox name="doc" value=4 required>Migration<br>
+        <input type=checkbox name="doc" value=5 required>Differently able Certificate<br>
+        <input type=checkbox name="doc" value=6 required>Original LC<br>
+        <input type=checkbox name="doc" value=7 required>Passing Certificate<br>
+        <input type=checkbox name="doc" value=8 required>Eligibility form with Affidavit<br>
+        <input type=checkbox name="doc" value=9 required>Sports Certificate<br>
+        <input type=checkbox name="doc" value=10 required>Transfer order(govt, ex-serviceman)<br>
+        <input type=checkbox name="doc" value=11 required>Affidavit for gap<br>
+        <pre><p style="border:solid">	1- Parents are given to unerstand that all rights are reserved with the management to say on what conditions they will admit or retain pupil in their college.
+	2- The form will be rejected unless accompanied by the following documents in support of the date of birth.
+		a) The Leaving Certificate	b) Marksheet
+	3- Fees once remitted will be refunded as per Education Department rules.
+</pre>
+        <br>
+        <b> I declare that all the details are true. I agree,<br>
+            1- To my ward being admitted to the class he/she is admitted by the college authorities.<br>
+            2- To adhere to the rules and regulations of the college as per calendar.<br><br><br><br><br>
+            <pre>
+____________________					_________________________________
+candidate's signature					Signature of parent/Guardian
+</pre>
+
+
+
+
+            <input type=submit name=submit value=submit>
+            <input type=reset name=reset value=reset>
+    </form>
+</body>
+
+</html>
