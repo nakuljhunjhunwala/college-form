@@ -21,6 +21,8 @@ mongoose.connect("mongodb+srv://nakul-admin:nakul@cluster-ffwly.mongodb.net/form
 
 
 const formSchema = {
+    formNo              : String,
+    submitDate          : String,
     aadharNo            : String,
     studentName         : String,
     fatherName          : String,
@@ -77,61 +79,90 @@ const Form = mongoose.model("form" , formSchema);
 
 app.get("/" , function (req , res) {
 
-   
+var formN = "23";
+
+(async function fun1(){
+  await Form.find({}, function (err, data) { 
+    if (err){ 
+        console.log(err); 
+    } 
+    else{ 
+
+for(let i=0 ; i<data.length ; i++){
+  
+  formN = data[i].formNo;
+} 
+      console.log(formN);
+    } 
+}); 
+} ())
+
+
+console.log(formN);
+
     res.render("form");
   
   })
 
 
-
+  
 
 
   app.post("/", function (req ,res) {
 
-    const aadharNo           = req.body.adr;
-    const studentName        = req.body.name;
-    const fatherName         = req.body.fname;
-    const surname            = req.body.sname;
-    const motherName         = req.body.mname;
-    const religion           = req.body.rel;
-    const cast               = req.body.cast
-    const subcast            = req.body.scast;
-    const nationality        = req.body.nat;
-    const motherTongue       = req.body.mt;
-    const fOccupation        = req.body.focc;
-    const mOccupation        = req.body.mooc;
-    const guardian           = req.body.gocc;
-    const fMobileNo          = req.body.fmn;
-    const mMobileNo          = req.body.mmn;
-    const gender             = req.body.gender;
-    const DobWord            = req.body.dobw;
-    const DOB                = req.body.dob;
-    const birthPlace         = req.body.bp;
-    const leavingCertificate = req.body.proof;
-    const lastSchoolAttended = req.body.ls;
-    const address            = req.body.ta;
-    const lastSchoolName     = req.body.ssc;
-    const sscSeatNo          = req.body.seat;
-    const boardName          = req.body.bn;
-    const dateOfPassing      = req.body.dop;
-    const englishMarks       = req.body.em;
-    const marathiMarks       = req.body.mm;
-    const hindiMarks         = req.body.hm;
-    const mathsMarks         = req.body.msm;
-    const scienceMarks       = req.body.sm;
-    const socialScienceMarks = req.body.ssm;
-    const total              = req.body.tot;
-    const percentage         = req.body.per;
-    const otherTotal         = req.body.otot;
-    const otherPercentage    = req.body.oper;
-    const optionalSubject    = req.body.opt1;
-    const optionalSubject2   = req.body.otp2;
-    const attatchedDocument  = req.body.doc;
+    var d = new Date();
+    const submitDate         = `${d.getDate()}-${d.getMonth()}-${d.getFullYear()}`;
+    const aadharNo           = l.toUpper(req.body.adr);
+    const studentName        = l.toUpper(req.body.name);
+    const fatherName         = l.toUpper(req.body.fname);
+    const surname            = l.toUpper(req.body.sname);
+    const motherName         = l.toUpper(req.body.mname);
+    const religion           = l.toUpper(req.body.rel);
+    const cast               = l.toUpper(req.body.cast);
+    const subcast            = l.toUpper(req.body.scast);
+    const nationality        = l.toUpper(req.body.nat);
+    const motherTongue       = l.toUpper(req.body.mt);
+    const fOccupation        = l.toUpper(req.body.focc);
+    const mOccupation        = l.toUpper(req.body.mooc);
+    const guardian           = l.toUpper(req.body.gocc);
+    const fMobileNo          = l.toUpper(req.body.fmn);
+    const mMobileNo          = l.toUpper(req.body.mmn);
+    const gender             = l.toUpper(req.body.gender);
+    const DobWord            = l.toUpper(req.body.dobw);
+    const DOB                = l.toUpper(req.body.dob);
+    const birthPlace         = l.toUpper(req.body.bp);
+    const leavingCertificate = l.toUpper(req.body.proof);
+    const lastSchoolAttended = l.toUpper(req.body.ls);
+    const address            = l.toUpper(req.body.ta);
+    const lastSchoolName     = l.toUpper(req.body.ssc);
+    const sscSeatNo          = l.toUpper(req.body.seat);
+    const boardName          = l.toUpper(req.body.bn);
+    const dateOfPassing      = l.toUpper(req.body.dop);
+    const englishMarks       = l.toUpper(req.body.em);
+    const marathiMarks       = l.toUpper(req.body.mm);
+    const hindiMarks         = l.toUpper(req.body.hm);
+    const mathsMarks         = l.toUpper(req.body.msm);
+    const scienceMarks       = l.toUpper(req.body.sm);
+    const socialScienceMarks = l.toUpper(req.body.ssm);
+    const total              = l.toUpper(req.body.tot);
+    const percentage         = l.toUpper(req.body.per);
+    const otherTotal         = l.toUpper(req.body.otot);
+    const otherPercentage    = l.toUpper(req.body.oper);
+    const optionalSubject    = l.toUpper(req.body.opt1);
+    const optionalSubject2   = l.toUpper(req.body.otp2);
+    const attatchedDocument  = l.toUpper(req.body.docs);
   
+
+    
+
+    
+
  
 
 
   const newPost = new Form({
+    formNo             : req.body.t1       ,
+    submitDate         : submitDate        ,
     aadharNo           : aadharNo          ,
     studentName        : studentName       ,
     fatherName         : fatherName        ,
@@ -170,18 +201,18 @@ app.get("/" , function (req , res) {
     otherPercentage    : otherPercentage   ,
     optionalSubject    : optionalSubject   ,
     optionalSubject2   : optionalSubject2  ,
-   
+    attatchedDocument  : attatchedDocument ,
   })
   newPost.save(function(err,result){ 
     if (err){ 
-        console.log(err); 
+      res.send(err);
     } 
     else{ 
-        console.log(result) 
+        res.send("<center><h1>Form Submitted Succesfully</h1></center>");
     } 
 });
   
-    res.redirect("/");
+    
   })
 
 
