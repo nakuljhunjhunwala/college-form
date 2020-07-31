@@ -1,0 +1,67 @@
+
+
+
+.page
+  {
+    padding: 30px;
+ border-style:groove;
+border-color:#f0ffff;
+margin: 20px;
+}
+.page1
+  {
+padding: 30px;
+ border-style:groove;
+border-color:#f0ffff;
+}
+
+.headerpart
+{
+border-color:#008080;
+ padding: 20px;
+ border-style:double;
+background-color:#f3d3a5;
+}
+.linkspart
+{
+    padding: 10px;
+ border-style:groove;
+ margin-top:5px;
+background-color:aqua;
+color:blue;
+}
+
+.linkspart  a
+{
+color:rgb(245,246,251);
+text-decoration:none;
+}
+
+.linksparts a.hover
+{
+   background-color:rgb(245,246,251);
+   color:rgb(12,100,198);
+
+}
+
+
+.bodypart
+{
+
+margin-top:5px;
+}
+
+.bodypart .imagepart
+{
+
+border-style:groove;
+background-image:url('Images/prin.png');
+background-repeat:no-repeat;
+}
+
+.bodypart h3
+{
+color:blue;
+text-align:center;
+text-decoration:underline;
+}

@@ -4,17 +4,16 @@
     <title>
         admission form
     </title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    </link>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body bgcolor=#badd99 text=green style="border:2px solid black; padding: 20px; margin: 15px;">
+<body bgcolor=#f9e9d2 text=black style="border:2px solid black; padding: 20px; margin: 15px;">
 
     <form action="/" method="post">
 
         <div class="linkspart">
             <center>
-                Form No:<input type=text name=t1 value=""></center><br>
+                Form No:<input type=text name=t1 placeholder=<%= formvalue %> value=<%= formvalue %>></center><br>
         </div>
         <div class="headerpart">
             <h1 align=center>THE SCHOLAR'S ENGLISH HIGH SCHOOL & JR. COLLEGE</h1>
@@ -65,17 +64,18 @@
             MONTH OF PASSING:
             <input type="month" name="dop" min="2001-01"><br>
             <b> MARKS OBTAINED:</b><BR>
-            ENGLISH:<input type=number name=em value="" maxlength=3 size=3 required>
-            MARATHI:<input type=number name=mm value="" maxlength=3 size=3 required>
-            HINDI:<input type=number name=hm value="" maxlength=3 size=3 required>
-            MATHS:<input type=number name=msm value="" maxlength=3 size=3 required>
-            SCIENCE:<input type=number name=sm value="" maxlength=3 size=3 required><br>
-            SOCIAL SCIENCE:<input type=number name=ssm value="" maxlength=3 size=3 required>
-            <b>TOTAL:</b><input type=number name=tot value="" maxlength=3 size=3 required>
-            <b>PERCENTAGE:</b><input type=text name=per value="" maxlength=6 size=6 required><br>
+            ENGLISH:<input type=number name=em value="" maxlength=3 size=3 required><br><br>
+            MARATHI:<input type=number name=mm value="" maxlength=3 size=3 required><br><br>
+            HINDI:<input type=number name=hm value="" maxlength=3 size=3 required><br><br>
+            MATHS:<input type=number name=msm value="" maxlength=3 size=3 required><br><br>
+            SCIENCE:<input type=number name=sm value="" maxlength=3 size=3 required><br><br>
+            SOCIAL SCIENCE:<input type=number name=ssm value="" maxlength=3 size=3 required><br><br>
+            <b>TOTAL:</b><input type=number name=tot value="" maxlength=3 size=3 required><br><br>
+            <b>PERCENTAGE:</b><input type=text name=per value="" maxlength=6 size=6 required><br><br>
             <b>OTHER BOARDS:</b><br>
             TOTAL:<input type=number name=otot value="" maxlength=3 size=3>
             PERCENTAGE:<input type=text name=oper value="" maxlength=6 size=6><br><br>
+            </div>
             <div class="page1">
                 <b>SUBJECTS (COMPULSORY):</b>
                 <ol type=1>
@@ -108,22 +108,23 @@
                 <input type=checkbox name="doc" onclick='printChecked()' value=10>Transfer order(govt, ex-serviceman)<br>
                 <input type=checkbox name="doc" onclick='printChecked()' value=11>Affidavit for gap<br>
                 <input type="hidden" name="docs" value="">
-                <pre><p style="border:solid">     1- Parents are given to unerstand that all rights are reserved with the management to say on what 
-     conditions they will admit or retain pupil in their college.
-     2- The form will be rejected unless accompanied by the following documents in support of the date of birth.
-	a) The Leaving Certificate	b) Marksheet
-     3- Fees once remitted will be refunded as per Education Department rules.
-</pre>
-                <br>
-                <b> I declare that all the details are true. I agree,<br>
-                    1- To my ward being admitted to the class he/she is admitted by the college authorities.<br>
-                    2- To adhere to the rules and regulations of the college as per calendar.<br><br><br><br><br>
-                    <pre>
-____________________					_________________________________
-candidate's signature					Signature of parent/Guardian
-</pre>
-                    <input type=submit name=submit value=submit>
-                    <input type=reset name=reset value=reset>
+                <p style="border:solid; padding: 3px;">     1- Parents are given to unerstand that all rights are reserved with the management to say on what 
+                    conditions they will admit or retain pupil in their college.
+                   <br><br> 2- The form will be rejected unless accompanied by the following documents in support of the date of birth.
+                   <br>a) The Leaving Certificate	<br>b) Marksheet
+                   <br> <br>3- Fees once remitted will be refunded as per Education Department rules.
+               </p>
+                       <br>
+                       <b> I declare that all the details are true. I agree,<br>
+                           1- To my ward being admitted to the class he/she is admitted by the college authorities.<br>
+                           2- To adhere to the rules and regulations of the college as per calendar.<br><br><br><br><br>
+                          
+               ____________________  <br> candidate's signature <br><br><br><br>					
+               _________________________________
+                           <br>	Signature of parent/Guardian
+               <br><br>
+                           <input type=submit name=submit value=submit>
+                           <input type=reset name=reset value=reset>
     </form>
 
 

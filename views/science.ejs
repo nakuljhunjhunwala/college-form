@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <title>
+        admission form
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body bgcolor=#f9e9d2 text=black style="border:2px solid black; padding: 20px; margin: 15px;">
+
+    <form action="/science" method="post">
+
+<div class="linkspart">
+        <center>
+            Form No:<input type=text name=t1 placeholder=<%= formvalue %> value=<%= formvalue %>></center><br></div>
+<div class="headerpart">
+        <h1 align=center>THE SCHOLAR'S ENGLISH HIGH SCHOOL & JR. COLLEGE</h1>
+        <h2 align=center>FORM OF APPLICATION FOR ADMISSION(2020-2021)-SCIENCE</h2></div>
+        <hr color=red width=100% height=200>
+<b>PERSONAL DETAILS:</b><br>
+        <div class="page1"><br> ENTER AADHAR CARD NUMBER:&nbsp &nbsp<input type=text name=adr size=25 required maxlength=><br>
+        ENTER THE STUDENT'S NAME:&nbsp &nbsp &nbsp &nbsp<input type=text name=name size=25 required><br>
+        ENTER THE FATHER'S NAME:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type=text name=fname size=25 required><br>
+        ENTER THE SURNAME :&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type=text name=sname size=25 required><br>
+        ENTER THE MOTHER'S NAME:&nbsp &nbsp &nbsp &nbsp &nbsp<input type=text name=mname size=25 required><br>
+        RESIDENTIAL ADDRESS:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<textarea name=ta rows=4 cols=30></textarea><br></div>
+<div class="page"><br>
+       RELIGION:&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type=text name=rel required><br>
+        CAST: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type=text name=cast required><br>
+        SUBCAST: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type=text name=scast required><br>
+        NATIONALITY :&nbsp &nbsp &nbsp &nbsp<input type=text name=nat value=INDIAN required><br>
+        MOTHER TONGUE:<input type=text name=mt required><br></div>
+<div class="page"><br>
+       <b> PARENT'S/GUARDIAN'S OCCUPATION:</b><br>
+        FATHER<input type=text name=focc required>
+        MOTHER<input type=text name=mocc>
+        GUARDIAN<input type=text name=gocc><br><br>
+       <b> PARENT'S CONTACT NUMBER:</b><BR>
+        FATHER:<input type=number name=fmn maxlength=10 required>
+        MOTHER:<input type=number name=mmn maxlength=10 required>
+        GUARDIAN:<input type=tel name=gmn maxlength=10><br><br></div>
+       <div class="page"> SELECT THE GENDER:<input type=radio name=gender value=1 required>MALE
+        <input type=radio name=gender value=2 required>FEMALE<br>
+        DATE OF BIRTH(in words):<input type=text name=dobw ><br>
+        SELECT DATE OF BIRTH:
+        <input type="date" name="dob">
+        <br>
+        ENTER THE BIRTH PLACE:<input type=text name=bp value="" required><br>
+        PROOF OF DATE OF BIRTH ATTATCHED(SCHOOL LEAVING CERTIFICATE):<input type=radio name=proof value=1 required>YES
+        <input type=radio name=proof value=2 required>NO<br>
+        LAST SCHOOL ATTENDED:<input type=text name=ls value=""  required><br></div>
+ <div class="page1">
+        SCHOOL THROUGH WHICH STUDENT HAS PASSED SSC:<input type=text name=ssc value=""  required><br>
+        SSC SEAT NUMBER:&nbsp &nbsp<input type=text name=seat value="" maxlength=7 required><br>
+        BOARD NAME: &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type=text name=bn value="" required><br>
+        MONTH OF PASSING:
+        <input type="month" name="dop" min="2001-01"><br>
+       <b> MARKS OBTAINED:</b><BR>
+        ENGLISH:<input type=number name=em value="" maxlength=3 size=3 required>
+        MARATHI:<input type=number name=mm value="" maxlength=3 size=3 required>
+        HINDI:<input type=number name=hm value="" maxlength=3 size=3 required>
+        MATHS:<input type=number name=msm value="" maxlength=3 size=3 required><br>
+        SCIENCE:<input type=number name=sm value="" maxlength=3 size=3 required><br>
+        SOCIAL SCIENCE:<input type=number name=ssm value="" maxlength=3 size=3 required>
+        <b>TOTAL:</b><input type=number name=tot value="" maxlength=3 size=3 required>
+        <b>PERCENTAGE:</b><input type=number name=per value="" maxlength=6 size=6 required><br>
+        <b>OTHER BOARDS:</b><br>
+        TOTAL:<input type=number name=otot value="" maxlength=3 size=3>
+        PERCENTAGE:<input type=number name=oper value="" maxlength=6 size=6><br><br>
+        </div>
+<div class="page1">
+        <b>SUBJECTS (COMPULSORY):</b>
+        <ol type=1>
+            <li>ENGLISH</li>
+            <li>PHYSICS</li>
+            <li>CHEMISTRY</li>
+            <li>EVS</li>
+            <li>PE</li>
+       
+        OPTIONAL SUBJECT ONE:
+        <input type=radio name=opt1 value=1 required>IT
+        <input type=radio name=opt1 value=2 required>CS-I	
+        <input type=radio name=opt1 value=3 required>HINDI
+        <input type=radio name=opt1 value=4 required>MARATHI<br>(if CS-I is chosen, it is compulsory to choose CS-II)<br>
+        OPTIONAL SUBJECT TWO:
+        <input type=radio name=opt2 value=1 required>BIOLOGY
+        <input type=radio name=opt2 value=2 required>CS-II<BR>
+        OPTIONAL SUBJECT THREE:
+        <input type=radio name=opt3 value=1 required>MATHS
+        <input type=radio name=opt3 value=2 required>GEOGRAPHY<br></ol>
+<br>
+        <b>DOCUMENTS ATTATCHED:</b><br>
+        <input type=checkbox name="doc" onclick='printChecked()' value=1>Marksheet of std X<br>
+        <input type=checkbox name="doc" onclick='printChecked()' value=2>Leaving/Transfer Certificate<br>
+        <input type=checkbox name="doc" onclick='printChecked()' value=3>Board Leaving Certificate(Private candidate)<br>
+        <input type=checkbox name="doc" onclick='printChecked()' value=4>Migration<br>
+        <input type=checkbox name="doc" onclick='printChecked()' value=5>Differently able Certificate<br>
+        <input type=checkbox name="doc" onclick='printChecked()' value=6>Original LC<br>
+        <input type=checkbox name="doc" onclick='printChecked()' value=7>Passing Certificate<br>
+        <input type=checkbox name="doc" onclick='printChecked()' value=8>Eligibility form with Affidavit<br>
+        <input type=checkbox name="doc" onclick='printChecked()' value=9>Sports Certificate<br>
+        <input type=checkbox name="doc" onclick='printChecked()' value=10>Transfer order(govt, ex-serviceman)<br>
+        <input type=checkbox name="doc" onclick='printChecked()' value=11>Affidavit for gap<br>
+        <input type="hidden" name="docs" value="">
+        <p style="border:solid; padding: 3px;">     1- Parents are given to unerstand that all rights are reserved with the management to say on what 
+     conditions they will admit or retain pupil in their college.
+    <br><br> 2- The form will be rejected unless accompanied by the following documents in support of the date of birth.
+	<br>a) The Leaving Certificate	<br>b) Marksheet
+    <br> <br>3- Fees once remitted will be refunded as per Education Department rules.
+</p>
+        <br>
+        <b> I declare that all the details are true. I agree,<br>
+            1- To my ward being admitted to the class he/she is admitted by the college authorities.<br>
+            2- To adhere to the rules and regulations of the college as per calendar.<br><br><br><br><br>
+           
+____________________  <br> candidate's signature <br><br><br><br>					
+_________________________________
+			<br>	Signature of parent/Guardian
+<br><br>
+            <input type=submit name=submit value=submit>
+            <input type=reset name=reset value=reset>
+    </form>
+
+    <script type="text/javascript">
+        function printChecked(){
+            var items=document.getElementsByName('doc');
+            var selectedItems="";
+            for(var i=0; i<items.length; i++){
+                if(items[i].type=='checkbox' && items[i].checked==true)
+                    selectedItems+=items[i].value+", ";
+            }
+            var doc=document.getElementsByName('docs');
+                doc.value = selectedItems;
+
+        }			
+    </script>
+</body>
+</html>
