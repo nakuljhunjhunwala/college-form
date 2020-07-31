@@ -15,10 +15,10 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://nakul-admin:nakul@cluster-ffwly.mongodb.net/formDB" , { useNewUrlParser: true , useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://scholarsdatabase:saima98765@cluster0.lhonf.mongodb.net/formDB" , { useNewUrlParser: true , useUnifiedTopology: true});
 
 
-
+// mongodb+srv://nakul-admin:nakul@cluster-ffwly.mongodb.net/formDB
 
 const formSchema = {
     formNo              : String,
