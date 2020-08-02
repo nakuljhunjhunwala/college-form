@@ -79,7 +79,36 @@ const Form2 = mongoose.model("science" , formSchema);
 
 
 
+
 app.get("/" , function (req , res) {
+  res.render("index")
+})
+
+
+app.get("/teachers" , function (req , res) {
+  res.render("t")
+})
+
+
+app.get("/involved" , function (req , res) {
+  res.render("gt")
+})
+
+
+app.get("/activities" , function (req , res) {
+  res.render("activities")
+})
+
+
+app.get("/contact" , function (req , res) {
+  res.render("contact")
+})
+
+
+
+
+
+app.get("/commerce" , function (req , res) {
 
 
  Form.find({}, function (err, data) { 
@@ -102,7 +131,7 @@ app.get("/" , function (req , res) {
   
 
 
-  app.post("/", function (req ,res) {
+  app.post("/commerce", function (req ,res) {
 
     var d = new Date();
     const submitDate         = `${d.getDate()}-${d.getMonth()}-${d.getFullYear()}`;
@@ -202,7 +231,7 @@ app.get("/" , function (req , res) {
       res.send(err);
     } 
     else{ 
-        res.send("<center><h1>Form Submitted Succesfully</h1></center>");
+        res.redirect("/");
     } 
 });
   
@@ -347,7 +376,7 @@ app.get("/" , function (req , res) {
          res.send(err);
        } 
        else{ 
-           res.send("<center><h1>Form Submitted Succesfully</h1></center>");
+        res.redirect("/");
        } 
    });
      
